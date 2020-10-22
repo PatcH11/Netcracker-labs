@@ -1,15 +1,19 @@
-package com.nc.lab1.contract;
+package com.nc.lab1.contract.mobile;
 
+import com.nc.lab1.contract.Contract;
 import com.nc.lab1.person.Person;
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
-public class MobileContract extends Contract{
+@ToString
+@EqualsAndHashCode(callSuper = true)
+public class MobileContract extends Contract {
 
     private int minutes;
     private int sms;

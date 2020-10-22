@@ -1,8 +1,10 @@
 package com.nc.lab1.person;
 
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+import lombok.AllArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -10,8 +12,10 @@ import java.time.Period;
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode()
 public class Person {
-    private Long id;
+    private long id;
     private String surname;
     private String name;
     private String patronymic;

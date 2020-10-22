@@ -1,14 +1,19 @@
-package com.nc.lab1.contract;
+package com.nc.lab1.contract.tv;
 
+import com.nc.lab1.contract.Contract;
 import com.nc.lab1.person.Person;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
-public class TvContract extends Contract{
+@ToString
+@EqualsAndHashCode(callSuper = true)
+public class TvContract extends Contract {
 
     private ChannelPackage channelPackage;
 
