@@ -17,7 +17,7 @@ public class TvContract extends Contract {
 
     private ChannelPackage channelPackage;
 
-    public TvContract(Long id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, ChannelPackage channelPackage) {
+    public TvContract(int id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, ChannelPackage channelPackage) {
         super(id, startOfContract, endOfContract, contractNumber, person);
         this.channelPackage=channelPackage;
     }

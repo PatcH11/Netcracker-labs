@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class InternetContract extends Contract {
     private double speedInternet;
 
-    public InternetContract(Long id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, double speedInternet) {
+    public InternetContract(int id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, double speedInternet) {
         super(id, startOfContract, endOfContract, contractNumber, person);
         this.speedInternet=speedInternet;
     }

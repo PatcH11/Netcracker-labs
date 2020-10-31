@@ -19,7 +19,7 @@ public class MobileContract extends Contract {
     private int sms;
     private double trafficInternet;
 
-    public MobileContract(Long id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, int minutes, int sms, double trafficInternet){
+    public MobileContract(int id, LocalDate startOfContract, LocalDate endOfContract, String contractNumber, Person person, int minutes, int sms, double trafficInternet){
         super(id,startOfContract,endOfContract,contractNumber,person);
         this.minutes=minutes;
         this.sms=sms;
