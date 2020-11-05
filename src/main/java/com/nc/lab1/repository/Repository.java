@@ -1,9 +1,12 @@
 package com.nc.lab1.repository;
 
+import java.util.Comparator;
+import java.util.function.Predicate;
+
 /**
  * Description of the repository.
  * @author Nikolay Evsyukov
- * @version 1.0
+ * @version 1.1
  * @param <T> the type of the item in this repository
  */
 public interface Repository<T> {
@@ -32,4 +35,23 @@ public interface Repository<T> {
      * @return the number of elements in this list
      */
     int size();
+
+    /**
+     * Sorting the repository.
+     * @param comparator sorting condition
+     */
+    void sort(Comparator<T> comparator);
+
+    /**
+     * Search the repository.
+     * @param predicate search term
+     * @return T repository
+     */
+    Repository<T> search(Predicate<T> predicate);
+
+    /**
+     * Returns an array T.
+     * @return T array
+     */
+    T[] getArray();
 }

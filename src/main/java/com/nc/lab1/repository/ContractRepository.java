@@ -1,11 +1,16 @@
 package com.nc.lab1.repository;
 
 import com.nc.lab1.contract.Contract;
+import com.nc.lab1.sorting.SelectionSort;
+import com.nc.lab1.sorting.Sorting;
+
+import java.util.*;
+import java.util.function.Predicate;
 
 /**
  * Repository class for contracts.
  * @author Nikolay Evsyukov
- * @version 1.0
+ * @version 1.1
  */
 public class ContractRepository implements Repository<Contract> {
 
@@ -25,10 +30,16 @@ public class ContractRepository implements Repository<Contract> {
     private Contract[] arrayContract;
 
     /**
+     * Sorting the repository.
+     */
+    private final Sorting<Contract> sorting;
+
+    /**
      * Constructs an empty list with an initial capacity.
      */
     public ContractRepository() {
         arrayContract = new Contract[DEFAULT_CAPACITY];
+        sorting = new SelectionSort<>();;
     }
 
     /**
@@ -88,5 +99,42 @@ public class ContractRepository implements Repository<Contract> {
     @Override
     public int size() {
         return size;
+    }
+
+    /**
+     * Sorting the repository.
+     * @param comparator sorting condition
+     */
+    @Override
+    public void sort(Comparator<Contract> comparator) {
+        sorting.sort(arrayContract,comparator);
+    }
+
+    /**
+     * Search the repository.
+     * @param predicate search term
+     * @return contract repository
+     */
+    @Override
+    public Repository<Contract> search(Predicate<Contract> predicate) {
+        Repository<Contract> repository = new ContractRepository();
+        for(int i = 0; i < size; i++){
+            if(arrayContract[i] != null){
+                Contract contract = arrayContract[i];
+                if(predicate.test(contract)){
+                    repository.add(contract);
+                }
+            }
+        }
+        return repository;
+    }
+
+    /**
+     * Returns an array of current contracts.
+     * @return array of contracts
+     */
+    @Override
+    public Contract[] getArray() {
+        return arrayContract;
     }
 }
