@@ -12,6 +12,8 @@
         <java-version>1.8</java-version>
         <lombok-version>1.18.16</lombok-version>
         <junit-version>4.12</junit-version>
+        <opencsv-version>5.3</opencsv-version>
+        <sf.opencsv-version>2.3</sf.opencsv-version>
     </properties>
 
     <build>
@@ -41,6 +43,18 @@
             <artifactId>junit</artifactId>
             <version>${junit-version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>${opencsv-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>${sf.opencsv-version}</version>
         </dependency>
     </dependencies>
 </project>
