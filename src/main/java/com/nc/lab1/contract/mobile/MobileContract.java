@@ -2,10 +2,7 @@ package com.nc.lab1.contract.mobile;
 
 import com.nc.lab1.contract.Contract;
 import com.nc.lab1.person.Person;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -18,6 +15,7 @@ import java.time.LocalDate;
 @Setter
 @ToString
 @EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
 public class MobileContract extends Contract {
 
     /**

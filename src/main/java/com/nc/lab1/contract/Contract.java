@@ -1,9 +1,7 @@
 package com.nc.lab1.contract;
 
 import com.nc.lab1.person.Person;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -15,6 +13,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 public abstract class Contract {
 
     /**
