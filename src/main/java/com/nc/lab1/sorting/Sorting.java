@@ -4,14 +4,16 @@ import java.util.Comparator;
 
 /**
  * Description of sorting.
+ *
+ * @param <T>
  * @author Nikolay Evsyukov
  * @version 1.0
- * @param <T>
  */
 public interface Sorting<T> {
 
     /**
      * Sorting method.
+     *
      * @param repository the repository to be sorted
      * @param comparator sorting condition
      */

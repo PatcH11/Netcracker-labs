@@ -1,13 +1,10 @@
 package com.nc.lab1.person;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import lombok.AllArgsConstructor;
+import lombok.*;
 
 /**
  * Passport description.
+ *
  * @author Nikolay Evsyukov
  * @version 1.0
  */

@@ -7,6 +7,7 @@ import java.time.Period;
 
 /**
  * Description of a person.
+ *
  * @author Nikolay Evsyukov
  * @version 1.0
  */
@@ -55,10 +56,11 @@ public class Person {
 
     /**
      * The age of the person.
+     *
      * @return age
      */
-    public int getAge(){
+    public int getAge() {
         LocalDate currentDate = LocalDate.now();
-        return Period.between(dateOfBirth,currentDate).getYears();
+        return Period.between(dateOfBirth, currentDate).getYears();
     }
 }

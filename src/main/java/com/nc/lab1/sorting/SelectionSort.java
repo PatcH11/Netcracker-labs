@@ -4,14 +4,16 @@ import java.util.Comparator;
 
 /**
  * Selection sorting algorithm.
+ *
+ * @param <T>
  * @author Nikolay Evsyukov
  * @version 1.0
- * @param <T>
  */
-public class SelectionSort<T> implements Sorting<T>{
+public class SelectionSort<T> implements Sorting<T> {
 
     /**
      * Selection sorting
+     *
      * @param repository the repository to be sorted
      * @param comparator sorting condition
      */
@@ -24,7 +26,7 @@ public class SelectionSort<T> implements Sorting<T>{
                 T min = repository[index];
                 swapIndex = index;
                 for (int sub = index + 1; sub < repository.length; sub++) {
-                    if(repository[sub]!=null){
+                    if (repository[sub] != null) {
                         if (comparator.compare(min, repository[sub]) > 0) {
                             min = repository[sub];
                             swapIndex = sub;

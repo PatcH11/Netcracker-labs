@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 /**
  * Description of the contract.
+ *
  * @author Nikolay Evsyukov
  * @version 1.0
  */
