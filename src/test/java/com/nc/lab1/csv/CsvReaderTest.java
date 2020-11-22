@@ -1,12 +1,11 @@
-package csv;
+package com.nc.lab1.csv;
 
-import com.nc.lab1.contract.Contract;
-import com.nc.lab1.contract.tv.ChannelPackage;
-import com.nc.lab1.contract.tv.TvContract;
-import com.nc.lab1.csv.CsvReader;
-import com.nc.lab1.person.Gender;
-import com.nc.lab1.person.Passport;
-import com.nc.lab1.person.Person;
+import com.nc.lab1.entity.contract.Contract;
+import com.nc.lab1.entity.contract.tv.ChannelPackage;
+import com.nc.lab1.entity.contract.tv.TvContract;
+import com.nc.lab1.entity.person.Gender;
+import com.nc.lab1.entity.person.Passport;
+import com.nc.lab1.entity.person.Person;
 import com.nc.lab1.repository.ContractRepository;
 import com.nc.lab1.repository.Repository;
 import org.junit.Assert;

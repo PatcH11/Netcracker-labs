@@ -1,8 +1,5 @@
-package person;
+package com.nc.lab1.entity.person;
 
-import com.nc.lab1.person.Gender;
-import com.nc.lab1.person.Passport;
-import com.nc.lab1.person.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

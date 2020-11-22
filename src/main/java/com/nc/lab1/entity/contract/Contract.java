@@ -1,6 +1,6 @@
-package com.nc.lab1.contract;
+package com.nc.lab1.entity.contract;
 
-import com.nc.lab1.person.Person;
+import com.nc.lab1.entity.person.Person;
 import lombok.*;
 
 import java.time.LocalDate;

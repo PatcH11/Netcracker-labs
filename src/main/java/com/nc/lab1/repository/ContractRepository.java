@@ -1,6 +1,6 @@
 package com.nc.lab1.repository;
 
-import com.nc.lab1.contract.Contract;
+import com.nc.lab1.entity.contract.Contract;
 import com.nc.lab1.sorting.SelectionSort;
 import com.nc.lab1.sorting.Sorting;
 

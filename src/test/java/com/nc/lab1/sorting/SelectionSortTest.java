@@ -1,7 +1,5 @@
-package sorting;
+package com.nc.lab1.sorting;
 
-import com.nc.lab1.sorting.SelectionSort;
-import com.nc.lab1.sorting.Sorting;
 import org.junit.Assert;
 import org.junit.Test;
 

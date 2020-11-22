@@ -1,4 +1,4 @@
-package com.nc.lab1.contract.tv;
+package com.nc.lab1.entity.contract.tv;
 
 /**
  * Listing available channel packages.

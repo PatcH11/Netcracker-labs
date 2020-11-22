@@ -1,14 +1,14 @@
 package com.nc.lab1.csv;
 
 import au.com.bytecode.opencsv.CSVReader;
-import com.nc.lab1.contract.Contract;
-import com.nc.lab1.contract.internet.InternetContract;
-import com.nc.lab1.contract.mobile.MobileContract;
-import com.nc.lab1.contract.tv.ChannelPackage;
-import com.nc.lab1.contract.tv.TvContract;
-import com.nc.lab1.person.Gender;
-import com.nc.lab1.person.Passport;
-import com.nc.lab1.person.Person;
+import com.nc.lab1.entity.contract.Contract;
+import com.nc.lab1.entity.contract.internet.InternetContract;
+import com.nc.lab1.entity.contract.mobile.MobileContract;
+import com.nc.lab1.entity.contract.tv.ChannelPackage;
+import com.nc.lab1.entity.contract.tv.TvContract;
+import com.nc.lab1.entity.person.Gender;
+import com.nc.lab1.entity.person.Passport;
+import com.nc.lab1.entity.person.Person;
 import com.nc.lab1.repository.Repository;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;

@@ -1,4 +1,4 @@
-package com.nc.lab1.person;
+package com.nc.lab1.entity.person;
 
 import lombok.*;
 

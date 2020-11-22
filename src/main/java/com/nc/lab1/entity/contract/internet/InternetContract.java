@@ -1,7 +1,7 @@
-package com.nc.lab1.contract.internet;
+package com.nc.lab1.entity.contract.internet;
 
-import com.nc.lab1.contract.Contract;
-import com.nc.lab1.person.Person;
+import com.nc.lab1.entity.contract.Contract;
+import com.nc.lab1.entity.person.Person;
 import lombok.*;
 
 import java.time.LocalDate;
