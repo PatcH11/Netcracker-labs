@@ -10,6 +10,9 @@ import com.nc.lab1.entity.person.Gender;
 import com.nc.lab1.entity.person.Passport;
 import com.nc.lab1.entity.person.Person;
 import com.nc.lab1.repository.Repository;
+import com.nc.lab1.validation.entity.contract.InternetContractValidate;
+import com.nc.lab1.validation.entity.contract.MobileContractValidate;
+import com.nc.lab1.validation.entity.contract.TvContractValidate;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 
@@ -25,7 +28,7 @@ import java.util.List;
  * Working with csv file.
  *
  * @author Nikolay Evsyukov
- * @version 1.0
+ * @version 1.1
  */
 public class CsvReader {
 
@@ -38,6 +41,21 @@ public class CsvReader {
      * Contract.
      */
     private Contract contract;
+
+    /**
+     * InternetContractValidate object.
+     */
+    private final InternetContractValidate internetContractValidate = new InternetContractValidate();
+
+    /**
+     * MobileContractValidate object.
+     */
+    private final MobileContractValidate mobileContractValidate = new MobileContractValidate();
+
+    /**
+     * TvContractValidate object.
+     */
+    private final TvContractValidate tvContractValidate = new TvContractValidate();
 
     /**
      * Populates the repository from a csv file.
@@ -85,7 +103,19 @@ public class CsvReader {
                         new Passport(Integer.parseInt(values[10]), Integer.parseInt(values[11]))
                 )));
 
-                repository.add(contract);
+                if (contract instanceof InternetContract) {
+                    if (internetContractValidate.isValid(internetContractValidate.validate((InternetContract) contract))) {
+                        repository.add(contract);
+                    }
+                } else if (contract instanceof MobileContract) {
+                    if (mobileContractValidate.isValid(mobileContractValidate.validate((MobileContract) contract))) {
+                        repository.add(contract);
+                    }
+                } else if (contract instanceof TvContract) {
+                    if (tvContractValidate.isValid(tvContractValidate.validate((TvContract) contract))) {
+                        repository.add(contract);
+                    }
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

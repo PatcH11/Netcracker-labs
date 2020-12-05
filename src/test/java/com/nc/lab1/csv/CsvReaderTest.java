@@ -16,6 +16,9 @@ import java.time.LocalDate;
 
 /**
  * Testing the CsvReader class.
+ *
+ * @author Nikolay Evsyukov
+ * @version 1.1
  */
 public class CsvReaderTest {
 
@@ -25,9 +28,9 @@ public class CsvReaderTest {
     @Test
     public void testFilling() {
         Person person = new Person(1,
-                "Surname1",
-                "Name1",
-                "Patronymic1",
+                "Ferguson",
+                "Eden",
+                "Walker",
                 LocalDate.of(2000, 12, 17),
                 Gender.MAN,
                 new Passport(1234, 123456));
